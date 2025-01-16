@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "RocketPass T-Shirt",
+    "description": "Comfortable and stylish RocketPass branded T-Shirt.",
+    "price": 19.99,
+    "image": "rocketpass-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "RocketPass Mug",
+    "description": "Start your day with a cup of coffee in your RocketPass Mug.",
+    "price": 12.99,
+    "image": "rocketpass-mug.jpg"
+  },
+  {
+    "id": 3,
+    "name": "RocketPass Hoodie",
+    "description": "Keep warm with the RocketPass branded hoodie.",
+    "price": 49.99,
+    "image": "rocketpass-hoodie.jpg"
+  },
+  {
+    "id": 1,
+    "name": "RocketPass T-Shirt",
+    "description": "Comfortable and stylish RocketPass branded T-Shirt.",
+    "price": 19.99,
+    "image": "rocketpass-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "RocketPass Mug",
+    "description": "Start your day with a cup of coffee in your RocketPass Mug.",
+    "price": 12.99,
+    "image": "rocketpass-mug.jpg"
+  },
+  {
+    "id": 3,
+    "name": "RocketPass Hoodie",
+    "description": "Keep warm with the RocketPass branded hoodie.",
+    "price": 49.99,
+    "image": "rocketpass-hoodie.jpg"
+  },
+  {
+    "id": 1,
+    "name": "RocketPass T-Shirt",
+    "description": "Comfortable and stylish RocketPass branded T-Shirt.",
+    "price": 19.99,
+    "image": "rocketpass-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "RocketPass Mug",
+    "description": "Start your day with a cup of coffee in your RocketPass Mug.",
+    "price": 12.99,
+    "image": "rocketpass-mug.jpg"
+  },
+  {
+    "id": 3,
+    "name": "RocketPass Hoodie",
+    "description": "Keep warm with the RocketPass branded hoodie.",
+    "price": 49.99,
+    "image": "rocketpass-hoodie.jpg"
+  },
+  {
+    "id": 1,
+    "name": "RocketPass T-Shirt",
+    "description": "Comfortable and stylish RocketPass branded T-Shirt.",
+    "price": 19.99,
+    "image": "rocketpass-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "RocketPass Mug",
+    "description": "Start your day with a cup of coffee in your RocketPass Mug.",
+    "price": 12.99,
+    "image": "rocketpass-mug.jpg"
+  },
+  {
+    "id": 3,
+    "name": "RocketPass Hoodie",
+    "description": "Keep warm with the RocketPass branded hoodie.",
+    "price": 49.99,
+    "image": "rocketpass-hoodie.jpg"
+  },
+  {
+    "id": 1,
+    "name": "RocketPass T-Shirt",
+    "description": "Comfortable and stylish RocketPass branded T-Shirt.",
+    "price": 19.99,
+    "image": "rocketpass-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "RocketPass Mug",
+    "description": "Start your day with a cup of coffee in your RocketPass Mug.",
+    "price": 12.99,
+    "image": "rocketpass-mug.jpg"
+  },
+  {
+    "id": 3,
+    "name": "RocketPass Hoodie",
+    "description": "Keep warm with the RocketPass branded hoodie.",
+    "price": 49.99,
+    "image": "rocketpass-hoodie.jpg"
+  },
+  {
+    "id": 1,
+    "name": "RocketPass T-Shirt",
+    "description": "Comfortable and stylish RocketPass branded T-Shirt.",
+    "price": 19.99,
+    "image": "rocketpass-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "RocketPass Mug",
+    "description": "Start your day with a cup of coffee in your RocketPass Mug.",
+    "price": 12.99,
+    "image": "rocketpass-mug.jpg"
+  },
+  {
+    "id": 3,
+    "name": "RocketPass Hoodie",
+    "description": "Keep warm with the RocketPass branded hoodie.",
+    "price": 49.99,
+    "image": "rocketpass-hoodie.jpg"
+  }
+]
