@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Mars Expedition",
+    "description": "Join us on an unforgettable journey to the Red Planet.",
+    "price": 499999.99,
+    "image": "mars-expedition.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Moon Adventure",
+    "description": "Experience the thrill of walking on the Moon.",
+    "price": 299999.99,
+    "image": "moon-adventure.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Space Station Stay",
+    "description": "Spend a week aboard the International Space Station.",
+    "price": 199999.99,
+    "image": "space-station-stay.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Asteroid Mining Expedition",
+    "description": "Be part of a pioneering crew to mine valuable resources from asteroids.",
+    "price": 799999.99,
+    "image": "asteroid-mining.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Jupiter's Moons Tour",
+    "description": "Explore the stunning and diverse moons of Jupiter.",
+    "price": 999999.99,
+    "image": "jupiter-moons.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Deep Space Exploration",
+    "description": "Venture into the unknown with our deep space exploration missions.",
+    "price": 1299999.99,
+    "image": "deep-space.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Mars Colony Building",
+    "description": "Contribute to building and living in the first human colony on Mars.",
+    "price": 1499999.99,
+    "image": "mars-colony.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Space Tourism",
+    "description": "Enjoy a luxury vacation in space with breathtaking views of Earth.",
+    "price": 399999.99,
+    "image": "space-tourism.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Saturn's Rings Exploration",
+    "description": "Get up close to the magnificent rings of Saturn.",
+    "price": 899999.99,
+    "image": "saturn-rings.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Mars Rover Driver",
+    "description": "Take control of a Mars rover and explore the Martian surface.",
+    "price": 599999.99,
+    "image": "mars-rover.jpg"
+  }
+]

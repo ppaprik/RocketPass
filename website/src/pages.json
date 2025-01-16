@@ -1,26 +1,26 @@
 {
   "home": {
-    "title": "Welcome to RocketPass",
-    "content": "Discover our collection of exclusive merchandise!"
+    "title": "Welcome to Galaxy Travels",
+    "content": "Discover our collection of exclusive space travel experiences!"
   },
   "shop": {
-    "title": "Shop",
-    "content": "Browse through our fantastic products!"
+    "title": "Services",
+    "content": "Browse through our fantastic space travel services!"
   },
   "about": {
     "title": "About Us",
-    "content": "Learn more about RocketPass and our mission."
+    "content": "Learn more about Galaxy Travels and our mission to explore the cosmos."
   },
   "contact": {
     "title": "Contact Us",
-    "content": "Get in touch with us."
+    "content": "Get in touch with us for any inquiries about your space journey."
   },
   "blog": {
     "title": "Our Blog",
-    "content": "Read the latest news and articles."
+    "content": "Read the latest news and articles about space exploration."
   },
   "faq": {
     "title": "FAQ",
-    "content": "Find answers to commonly asked questions."
+    "content": "Find answers to commonly asked questions about our space travel services."
   }
 }
