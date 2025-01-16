@@ -1,27 +1,26 @@
 {
-    "home": {
-      "title": "Welcome to RocketPass",
-      "content": "Discover our collection of exclusive merchandise!"
-    },
-    "shop": {
-      "title": "Shop",
-      "content": "Browse through our fantastic products!"
-    },
-    "about": {
-      "title": "About Us",
-      "content": "Learn more about RocketPass and our mission."
-    },
-    "contact": {
-      "title": "Contact Us",
-      "content": "Get in touch with us."
-    },
-    "blog": {
-      "title": "Our Blog",
-      "content": "Read the latest news and articles."
-    },
-    "faq": {
-      "title": "FAQ",
-      "content": "Find answers to commonly asked questions."
-    }
+  "home": {
+    "title": "Welcome to RocketPass",
+    "content": "Discover our collection of exclusive merchandise!"
+  },
+  "shop": {
+    "title": "Shop",
+    "content": "Browse through our fantastic products!"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Learn more about RocketPass and our mission."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "content": "Get in touch with us."
+  },
+  "blog": {
+    "title": "Our Blog",
+    "content": "Read the latest news and articles."
+  },
+  "faq": {
+    "title": "FAQ",
+    "content": "Find answers to commonly asked questions."
   }
-  
+}
