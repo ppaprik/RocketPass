@@ -1,6 +1,6 @@
 <template>
     <footer>
-      <p>&copy; 2025 Galaxy Travels. All rights reserved.</p>
+      <p>&copy; 2025 RockerPass. All rights reserved.</p>
     </footer>
   </template>
   

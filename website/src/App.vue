@@ -73,7 +73,7 @@
   main {
     display: flex;
     justify-content: center;
-    padding-top: 6rem;
+    padding-top: 3rem;
     width: 100%;
     min-height: calc(100vh - 6rem); /* Ensure it takes full height minus header */
     box-sizing: border-box;

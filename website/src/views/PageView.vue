@@ -1,23 +1,27 @@
 <template>
     <div class="page-container" :class="{ centerContent: isHomePage }">
-        <p v-if="!isShopPage">{{ pageData.content }}</p>
-        <ServiceList v-if="isShopPage" @add-to-cart="addToCart" />
+      <p v-if="!isShopPage && !isAboutPage">{{ pageData.content }}</p>
+      <ServiceList v-if="isShopPage" @add-to-cart="addToCart" />
+      <AboutRocketPass v-if="isAboutPage" :aboutData="pageData.aboutRocketPass" />
     </div>
-  </template>  
+  </template>
   
   <script>
   import pagesData from '../pages.json';
   import ServiceList from '../components/ServiceList.vue';
+  import AboutRocketPass from '../components/AboutRocketPass.vue';
   
   export default {
     components: {
-      ServiceList
+      ServiceList,
+      AboutRocketPass
     },
     data() {
       return {
         pageData: {},
         isShopPage: false,
         isHomePage: false,
+        isAboutPage: false,
         cartItems: JSON.parse(localStorage.getItem('cart')) || []
       };
     },
@@ -34,6 +38,8 @@
         const page = this.$route.name;
         this.pageData = pagesData[page] || { title: 'Page Not Found', content: 'Sorry, this page does not exist.' };
         this.isShopPage = page === 'shop';
+        this.isHomePage = page === 'home';
+        this.isAboutPage = page === 'about';
       },
       addToCart(service) {
         const cartItem = this.cartItems.find(item => item.id === service.id);
@@ -75,21 +81,22 @@
   };
   </script>
   
-<style scoped>
-.page-container {
+  <style scoped>
+  .page-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100%; /* Ensure it takes the full height of the main container */
-}
-
-.centerContent {
+  }
+  
+  .centerContent {
     min-height: calc(100vh - 6rem); /* Adjust for header height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-</style>
+  }
+  </style>
+  

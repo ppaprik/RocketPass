@@ -1,26 +1,47 @@
 {
   "home": {
-    "title": "Welcome to Galaxy Travels",
-    "content": "Discover our collection of exclusive space travel experiences!"
+    "title": "Home",
+    "content": "Welcome to RocketPass"
   },
   "shop": {
     "title": "Services",
-    "content": "Browse through our fantastic space travel services!"
+    "content": "Our Services"
+  },
+    "contact": {
+    "title": "Contact",
+    "content": "Get in touch with us"
   },
   "about": {
     "title": "About Us",
-    "content": "Learn more about Galaxy Travels and our mission to explore the cosmos."
-  },
-  "contact": {
-    "title": "Contact Us",
-    "content": "Get in touch with us for any inquiries about your space journey."
-  },
-  "blog": {
-    "title": "Our Blog",
-    "content": "Read the latest news and articles about space exploration."
-  },
-  "faq": {
-    "title": "FAQ",
-    "content": "Find answers to commonly asked questions about our space travel services."
+    "content": "Learn more about RocketPass",
+    "aboutRocketPass": {
+      "title": "About RocketPass",
+      "description": "RocketPass is a pioneering space agency dedicated to advancing human space exploration and expanding our understanding of the cosmos. Our mission is to make space travel accessible and inspire the next generation of explorers. Join us on a journey to the stars as we push the boundaries of science and technology.",
+      "foundingDate": "Founded in 2023",
+      "headquarters": "Headquarters: New York, USA",
+      "vision": "Vision: To be the leading provider of space travel experiences.",
+      "missions": [
+        "Mars Colonization: Establish the first human settlement on Mars.",
+        "Lunar Mining: Extract resources from the Moon to support space travel.",
+        "Deep Space Exploration: Send missions beyond our solar system."
+      ],
+      "team": [
+        {
+          "name": "Elon Skywalker",
+          "role": "CEO",
+          "bio": "Elon is a visionary leader with a passion for space exploration and innovation. He has led RocketPass since its inception."
+        },
+        {
+          "name": "Jane Stellar",
+          "role": "Chief Scientist",
+          "bio": "Jane is an expert in astrophysics and has been instrumental in developing RocketPass's groundbreaking technologies."
+        },
+        {
+          "name": "Mark Orbit",
+          "role": "Head of Engineering",
+          "bio": "Mark oversees the engineering team, ensuring that all spacecraft are built to the highest standards of safety and efficiency."
+        }
+      ]
+    }
   }
 }

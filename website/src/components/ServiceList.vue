@@ -4,7 +4,8 @@
             <div class="service-container">
                 <div class="card" v-for="service in services" :key="service.id">
                     <div class="card-img">
-                        <img :src="service.image" :alt="service.name" />
+                        <!-- <img :src="../../images/service.image" :alt="service.name" /> -->
+                        <img :src="`/images/${service.image}`" :alt="service.name" />
                     </div>
                     <div class="card-info">
                         <p class="text-title">{{ service.name }}</p>
@@ -61,13 +62,17 @@ export default {
 .service-container-wrapper {
     display: flex;
     justify-content: center;
-    padding: 3rem;
 }
 
 .service-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
+
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers the grid items vertically (if height is set) */
+    place-items: center; /* Shorthand for both justify-content and align-items */
 }
 
 /* From Uiverse.io by alexruix */ 
@@ -86,11 +91,19 @@ export default {
 }
 
 .card-img {
- background-color: #ffcaa6;
+ background-color: darkviolet;
  height: 100px;
+ color: white;
  width: 100%;
  border-radius: .5rem;
  transition: .3s ease;
+}
+
+.card-img img {
+ width: 100%;
+ height: 100%;
+ border-radius: 0.5rem;
+ object-fit: cover;
 }
 
 .card-info {
