@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import pagesData from '../pages.json';
-import ServiceList from '../components/ServiceList.vue';
-import AboutRocketPass from '../components/AboutRocketPass.vue';
+import pagesData from '../pages.json'
+import ServiceList from '../components/ServiceList.vue'
+import AboutRocketPass from '../components/AboutRocketPass.vue'
 
 export default {
   components: {
     ServiceList,
-    AboutRocketPass
+    AboutRocketPass,
   },
   data() {
     return {
@@ -22,63 +22,66 @@ export default {
       isShopPage: false,
       isHomePage: false,
       isAboutPage: false,
-      cartItems: JSON.parse(localStorage.getItem('cart')) || []
-    };
+      cartItems: JSON.parse(localStorage.getItem('cart')) || [],
+    }
   },
   created() {
-    this.loadPageData();
+    this.loadPageData()
   },
   watch: {
-    '$route'() {
-      this.loadPageData();
-    }
+    $route() {
+      this.loadPageData()
+    },
   },
   methods: {
     loadPageData() {
-      const page = this.$route.name;
-      this.pageData = pagesData[page] || { title: 'Page Not Found', content: 'Sorry, this page does not exist.' };
-      this.isShopPage = page === 'shop';
-      this.isHomePage = page === 'home';
-      this.isAboutPage = page === 'about';
+      const page = this.$route.name
+      this.pageData = pagesData[page] || {
+        title: 'Page Not Found',
+        content: 'Sorry, this page does not exist.',
+      }
+      this.isShopPage = page === 'shop'
+      this.isHomePage = page === 'home'
+      this.isAboutPage = page === 'about'
     },
     addToCart(service) {
-      const cartItem = this.cartItems.find(item => item.id === service.id);
+      const cartItem = this.cartItems.find((item) => item.id === service.id)
       if (cartItem) {
-        cartItem.quantity++;
+        cartItem.quantity++
       } else {
-        this.cartItems.push({ ...service, quantity: 1 });
+        this.cartItems.push({ ...service, quantity: 1 })
       }
-      this.updateCart(this.cartItems);
+      this.updateCart(this.cartItems)
     },
     incrementItem(item) {
-      const cartItem = this.cartItems.find(cartItem => cartItem.id === item.id);
+      const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id)
       if (cartItem) {
-        cartItem.quantity++;
+        cartItem.quantity++
       }
-      this.updateCart(this.cartItems);
+      this.updateCart(this.cartItems)
     },
     decrementItem(item) {
-      const cartItem = this.cartItems.find(cartItem => cartItem.id === item.id);
+      const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id)
       if (cartItem && cartItem.quantity > 1) {
-        cartItem.quantity--;
+        cartItem.quantity--
       } else {
-        this.removeFromCart(item);
+        this.removeFromCart(item)
       }
-      this.updateCart(this.cartItems);
+      this.updateCart(this.cartItems)
     },
     removeFromCart(item) {
-      const index = this.cartItems.findIndex(cartItem => cartItem.id === item.id);
+      const index = this.cartItems.findIndex((cartItem) => cartItem.id === item.id)
       if (index !== -1) {
-        this.cartItems.splice(index, 1);
+        this.cartItems.splice(index, 1)
       }
-      this.updateCart(this.cartItems);
+      this.updateCart(this.cartItems)
     },
     updateCart(newCartItems) {
-      localStorage.setItem('cart', JSON.stringify(newCartItems));
-      this.$emit('update-cart', newCartItems);
-    }
-  }
-};
+      localStorage.setItem('cart', JSON.stringify(newCartItems))
+      this.$emit('update-cart', newCartItems)
+    },
+  },
+}
 </script>
 
 <style scoped>

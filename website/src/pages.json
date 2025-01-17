@@ -7,13 +7,9 @@
     "title": "Services",
     "content": "Our Services"
   },
-    "contact": {
-    "title": "Contact",
-    "content": "Get in touch with us"
-  },
   "about": {
     "title": "About Us",
-    "content": "Learn more about RocketPass",
+    "description": "Learn more about RocketPass and get in touch with us.",
     "aboutRocketPass": {
       "title": "About RocketPass",
       "description": "RocketPass is a pioneering space agency dedicated to advancing human space exploration and expanding our understanding of the cosmos. Our mission is to make space travel accessible and inspire the next generation of explorers. Join us on a journey to the stars as we push the boundaries of science and technology.",
@@ -41,7 +37,29 @@
           "role": "Head of Engineering",
           "bio": "Mark oversees the engineering team, ensuring that all spacecraft are built to the highest standards of safety and efficiency."
         }
-      ]
+      ],
+      "contactInfo": {
+        "email": "contact@rocketpass.com",
+        "phone": "+1-800-ROCKET",
+        "address": "123 Space Road, New York, NY 10001, USA",
+        "socialMedia": [
+          {
+            "platform": "facebook",
+            "handle": "@RocketPass",
+            "link": "https://www.facebook.com/RocketPass"
+          },
+          {
+            "platform": "twitter",
+            "handle": "@RocketPass",
+            "link": "https://www.twitter.com/RocketPass"
+          },
+          {
+            "platform": "instagram",
+            "handle": "@RocketPass",
+            "link": "https://www.instagram.com/RocketPass"
+          }
+        ]
+      }
     }
   }
 }

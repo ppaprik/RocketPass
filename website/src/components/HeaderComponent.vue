@@ -15,26 +15,26 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router';
-import { ref, computed, onMounted } from 'vue';
-import pagesData from '../pages.json';  // Adjust the path to your JSON file if needed
+import { RouterLink } from 'vue-router'
+import { ref, computed, onMounted } from 'vue'
+import pagesData from '../pages.json' // Adjust the path to your JSON file if needed
 
-const navigationLinks = ref({});
+const navigationLinks = ref({})
 
 onMounted(() => {
-  navigationLinks.value = pagesData;
-});
+  navigationLinks.value = pagesData
+})
 
 const props = defineProps({
   cartItems: {
     type: Array,
-    required: true
-  }
-});
+    required: true,
+  },
+})
 
 const totalItemsInCart = computed(() => {
-  return props.cartItems.reduce((total, item) => total + item.quantity, 0);
-});
+  return props.cartItems.reduce((total, item) => total + item.quantity, 0)
+})
 </script>
 
 <style scoped>
