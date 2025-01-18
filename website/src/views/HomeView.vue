@@ -34,17 +34,17 @@
 export default {
   name: 'HomeView',
   mounted() {
-    this.createStarAnimation()
+    this.createStarAnimation();
   },
   methods: {
     createStarAnimation() {
-      const canvas = document.getElementById('star-canvas')
-      const context = canvas.getContext('2d')
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      const canvas = document.getElementById('star-canvas');
+      const context = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-      const stars = []
-      const numStars = 1000
+      const stars = [];
+      const numStars = 1000;
 
       for (let i = 0; i < numStars; i++) {
         stars.push({
@@ -53,40 +53,40 @@ export default {
           radius: Math.random() * 1.5,
           dx: (Math.random() - 0.5) * 0.5,
           dy: (Math.random() - 0.5) * 0.5,
-        })
+        });
       }
 
-      function drawStars() {
-        context.clearRect(0, 0, canvas.width, canvas.height)
-        context.fillStyle = 'white'
-        context.beginPath()
+      const drawStars = () => {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = 'white';
+        context.beginPath();
         stars.forEach((star) => {
-          context.moveTo(star.x, star.y)
-          context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, true)
-        })
-        context.fill()
-        updateStars()
-      }
+          context.moveTo(star.x, star.y);
+          context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, true);
+        });
+        context.fill();
+        updateStars();
+      };
 
-      function updateStars() {
+      const updateStars = () => {
         stars.forEach((star) => {
-          star.x += star.dx
-          star.y += star.dy
+          star.x += star.dx;
+          star.y += star.dy;
 
-          if (star.x < 0 || star.x > canvas.width) star.dx *= -1
-          if (star.y < 0 || star.y > canvas.height) star.dy *= -1
-        })
-      }
+          if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
+          if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
+        });
+      };
 
-      function animate() {
-        drawStars()
-        requestAnimationFrame(animate)
-      }
+      const animate = () => {
+        drawStars();
+        requestAnimationFrame(animate);
+      };
 
-      animate()
+      animate();
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -130,12 +130,7 @@ export default {
   justify-content: center;
   padding: 2rem;
   border-radius: 5rem;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adding a semi-transparent background for better readability */
+  background-color: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background for better readability */
   backdrop-filter: blur(1px); /* Adding a blur effect */
   z-index: 1;
 }

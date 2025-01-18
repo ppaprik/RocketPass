@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <!-- <a href="/"><img src="../../favicon.png" alt="logo" class="logo"></a> -->
+      <!-- <a href="/"> <img src="../../favicon.png" alt="logo" class="logo"> </a> -->
       <RouterLink
         v-for="(page, key) in navigationLinks"
         :key="key"
@@ -14,27 +14,32 @@
   </header>
 </template>
 
-<script setup>
-import { RouterLink } from 'vue-router'
-import { ref, computed, onMounted } from 'vue'
-import pagesData from '../pages.json' // Adjust the path to your JSON file if needed
+<script>
+import { RouterLink } from 'vue-router';
+import pagesData from '../pages.json'; // Adjust the path to your JSON file if needed
 
-const navigationLinks = ref({})
-
-onMounted(() => {
-  navigationLinks.value = pagesData
-})
-
-const props = defineProps({
-  cartItems: {
-    type: Array,
-    required: true,
+export default {
+  name: 'HeaderComponent',
+  props: {
+    cartItems: {
+      type: Array,
+      required: true,
+    },
   },
-})
-
-const totalItemsInCart = computed(() => {
-  return props.cartItems.reduce((total, item) => total + item.quantity, 0)
-})
+  data() {
+    return {
+      navigationLinks: {},
+    };
+  },
+  computed: {
+    totalItemsInCart() {
+      return this.cartItems.reduce((total, item) => total + item.quantity, 0);
+    },
+  },
+  created() {
+    this.navigationLinks = pagesData;
+  },
+};
 </script>
 
 <style scoped>

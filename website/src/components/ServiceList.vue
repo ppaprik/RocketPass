@@ -4,7 +4,6 @@
       <div class="service-container">
         <div class="card" v-for="service in services" :key="service.id">
           <div class="card-img">
-            <!-- <img :src="../../images/service.image" :alt="service.name" /> -->
             <img :src="`/images/${service.image}`" :alt="service.name" />
           </div>
           <div class="card-info">
@@ -31,34 +30,25 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="service" v-for="service in services" :key="service.id">
-                    <img :src="service.image" :alt="service.name" />
-                    <h3>{{ service.name }}</h3>
-                    <p>{{ service.description }}</p>
-                    <p>Price: ${{ service.price.toFixed(2) }}</p>
-                    <button @click="addToCart(service)">Book Now</button>
-                </div> -->
-
-  /* From Uiverse.io by alexruix */
 </template>
 
 <script>
-import servicesData from '../services.json'
+import servicesData from '../services.json';
 
 export default {
+  name: 'ServiceCard',
   data() {
     return {
       services: servicesData,
-    }
+    };
   },
   emits: ['add-to-cart'],
   methods: {
     addToCart(service) {
-      this.$emit('add-to-cart', service)
+      this.$emit('add-to-cart', service);
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -72,13 +62,11 @@ export default {
   grid-template-columns: repeat(3, minmax(20rem, 1fr));
   gap: 2rem;
   margin-top: 3rem;
-
-  justify-content: center; /* Centers the grid horizontally */
-  align-items: center; /* Centers the grid items vertically (if height is set) */
-  place-items: center; /* Shorthand for both justify-content and align-items */
+  justify-content: center;
+  align-items: center;
+  place-items: center;
 }
 
-/* From Uiverse.io by alexruix */
 .card {
   width: 190px;
   height: fit-content;
@@ -129,7 +117,6 @@ svg {
   border-top: 1px solid #ddd;
 }
 
-/*Text*/
 .text-title {
   font-weight: 900;
   font-size: 1.2em;
@@ -141,7 +128,6 @@ svg {
   padding-bottom: 10px;
 }
 
-/*Button*/
 .card-button {
   border: 1px solid #252525;
   display: flex;
@@ -151,7 +137,6 @@ svg {
   transition: 0.3s ease-in-out;
 }
 
-/*Hover*/
 .card-img:hover {
   transform: translateY(-25%);
   box-shadow:

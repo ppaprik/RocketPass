@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <h3>Shopping Cart</h3>
     <ul>
@@ -34,4 +34,4 @@ ul {
 li {
   margin-bottom: 0.5rem;
 }
-</style>
+</style> -->
