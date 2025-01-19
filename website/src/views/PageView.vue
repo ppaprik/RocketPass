@@ -1,20 +1,34 @@
 <template>
   <div class="page-container" :class="{ centerContent: isHomePage }">
-    <p v-if="!isShopPage && !isAboutPage">{{ pageData.content }}</p>
+    <!-- Dynamic content based on the route -->
+    <!-- <p v-if="!isShopPage && !isAboutPage && !isHomePage">{{ pageData.content }}</p> -->
+    
+    <!-- Services (Shop Page) -->
     <ServiceList v-if="isShopPage" @add-to-cart="addToCart" />
+    
+    <!-- About RocketPass (About Page) -->
     <AboutRocketPass v-if="isAboutPage" :aboutData="pageData.aboutRocketPass" />
+
+    <Home v-if="isHomePage" :aboutData="pageData.aboutRocketPass" />
   </div>
 </template>
 
 <script>
-import pagesData from '../pages.json';
+import pagesData from '../pages.json'; // Assuming this is a JSON file for page data
 import ServiceList from '../components/ServiceList.vue';
 import AboutRocketPass from '../components/AboutRocketPass.vue';
+import Home from '../components/Home.vue';
 
 export default {
+  name: 'PageView',
   components: {
     ServiceList,
     AboutRocketPass,
+    Home
+  },
+  props: {
+    cartItems: Array, // Receiving cartItems from parent (App.vue)
+    updateCart: Function, // Method to update cart in parent
   },
   data() {
     return {
@@ -22,28 +36,31 @@ export default {
       isShopPage: false,
       isHomePage: false,
       isAboutPage: false,
-      cartItems: JSON.parse(localStorage.getItem('cart')) || [],
     };
   },
   created() {
-    this.loadPageData();
+    this.loadPageData(); // Load data on component creation
   },
   watch: {
     $route() {
-      this.loadPageData();
-    },
+      this.loadPageData(); // Load page data when the route changes
+    }
   },
   methods: {
     loadPageData() {
-      const page = this.$route.name;
+      const page = this.$route.params.page || 'home'; // Use params.page or default to 'home'
+
       this.pageData = pagesData[page] || {
         title: 'Page Not Found',
         content: 'Sorry, this page does not exist.',
       };
+
+      // Check the route and set the flags accordingly
       this.isShopPage = page === 'shop';
       this.isHomePage = page === 'home';
       this.isAboutPage = page === 'about';
     },
+    // Add item to the cart
     addToCart(service) {
       const cartItem = this.cartItems.find((item) => item.id === service.id);
       if (cartItem) {
@@ -52,35 +69,8 @@ export default {
         this.cartItems.push({ ...service, quantity: 1 });
       }
       this.updateCart(this.cartItems);
-    },
-    incrementItem(item) {
-      const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id);
-      if (cartItem) {
-        cartItem.quantity++;
-      }
-      this.updateCart(this.cartItems);
-    },
-    decrementItem(item) {
-      const cartItem = this.cartItems.find((cartItem) => cartItem.id === item.id);
-      if (cartItem && cartItem.quantity > 1) {
-        cartItem.quantity--;
-      } else {
-        this.removeFromCart(item);
-      }
-      this.updateCart(this.cartItems);
-    },
-    removeFromCart(item) {
-      const index = this.cartItems.findIndex((cartItem) => cartItem.id === item.id);
-      if (index !== -1) {
-        this.cartItems.splice(index, 1);
-      }
-      this.updateCart(this.cartItems);
-    },
-    updateCart(newCartItems) {
-      localStorage.setItem('cart', JSON.stringify(newCartItems));
-      this.$emit('update-cart', newCartItems);
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -91,11 +81,12 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%; /* Ensure it takes the full height of the main container */
+  height: 100%;
+  padding-top: 1rem;
 }
 
 .centerContent {
-  min-height: calc(100vh - 6rem); /* Adjust for header height */
+  min-height: calc(100vh - 6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
