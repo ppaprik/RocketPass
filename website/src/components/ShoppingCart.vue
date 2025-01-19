@@ -20,7 +20,6 @@
 export default {
   props: {
     cartItems: Array, // Receiving cartItems from parent (App.vue)
-    updateCart: Function,
   },
   computed: {
     totalPrice() {
@@ -30,27 +29,27 @@ export default {
   methods: {
     incrementItem(item) {
       item.quantity++;
-      this.updateCart();
+      this.$emit('update-cart', this.cartItems);
     },
     decrementItem(item) {
       item.quantity--;
       if (item.quantity === 0) {
         this.removeFromCart(item);
       } else {
-        this.updateCart();
+        this.$emit('update-cart', this.cartItems);
       }
     },
     removeFromCart(item) {
       const index = this.cartItems.findIndex((cartItem) => cartItem.id === item.id);
       if (index !== -1) {
         this.cartItems.splice(index, 1);
-        this.updateCart();
+        this.$emit('update-cart', this.cartItems);
       }
     },
     updateCart() {
-      this.updateCart(this.cartItems);
+      this.$emit('update-cart', this.cartItems);
     },
-  },
+  }
 };
 </script>
 

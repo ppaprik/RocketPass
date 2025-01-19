@@ -1,7 +1,6 @@
 <template>
   <div class="page-container" :class="{ centerContent: isHomePage }">
     <!-- Dynamic content based on the route -->
-    <!-- <p v-if="!isShopPage && !isAboutPage && !isHomePage">{{ pageData.content }}</p> -->
     
     <!-- Services (Shop Page) -->
     <ServiceList v-if="isShopPage" @add-to-cart="addToCart" />
@@ -28,7 +27,6 @@ export default {
   },
   props: {
     cartItems: Array, // Receiving cartItems from parent (App.vue)
-    updateCart: Function, // Method to update cart in parent
   },
   data() {
     return {
@@ -60,7 +58,7 @@ export default {
       this.isHomePage = page === 'home';
       this.isAboutPage = page === 'about';
     },
-    // Add item to the cart
+    // Add item to the cart and emit update-cart event
     addToCart(service) {
       const cartItem = this.cartItems.find((item) => item.id === service.id);
       if (cartItem) {
@@ -68,7 +66,7 @@ export default {
       } else {
         this.cartItems.push({ ...service, quantity: 1 });
       }
-      this.updateCart(this.cartItems);
+      this.$emit('update-cart', this.cartItems);
     }
   }
 };

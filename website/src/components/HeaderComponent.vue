@@ -28,17 +28,14 @@ export default {
   },
   data() {
     return {
-      navigationLinks: {},
+      navigationLinks: pagesData,
     };
   },
   computed: {
     totalItemsInCart() {
       return this.cartItems.reduce((total, item) => total + item.quantity, 0);
     },
-  },
-  created() {
-    this.navigationLinks = pagesData;
-  },
+  }
 };
 </script>
 
