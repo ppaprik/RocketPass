@@ -1,7 +1,6 @@
 <template>
   <header>
     <nav>
-      <!-- <a href="/"> <img src="../../favicon.png" alt="logo" class="logo"> </a> -->
       <RouterLink
         v-for="(page, key) in navigationLinks"
         :key="key"
