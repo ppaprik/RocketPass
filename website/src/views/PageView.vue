@@ -48,10 +48,7 @@ export default {
     loadPageData() {
       const page = this.$route.params.page || 'home'; // Use params.page or default to 'home'
 
-      this.pageData = pagesData[page] || {
-        title: 'Page Not Found',
-        content: 'Sorry, this page does not exist.',
-      };
+      this.pageData = pagesData[page] || this.$router.push('/');
 
       // Check the route and set the flags accordingly
       this.isShopPage = page === 'shop';
