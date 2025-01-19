@@ -13,6 +13,11 @@ export default {
   components: {
     ShoppingCart,
   },
+  data() {
+    return {
+      cartItems: [], // Initialize cartItems as an empty array
+    };
+  },
   methods: {
     updateCartHandler(updatedCart) {
       this.cartItems = updatedCart;
